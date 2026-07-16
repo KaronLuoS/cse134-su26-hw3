@@ -1,0 +1,134 @@
+/* :root{
+    --color-title: #b36902;
+    --color-primary: #FCE68E;
+    --color-secondary: #c89820;
+    --color-primary-text:#000000;
+    --color-secondary-text:#6B7280;
+    --color-background: #F9F2CC;
+    --color-border: #7d2222;
+    --spacing: 1rem;
+    --font-stack: Arial, sans-serif;
+
+} */
+/*  Using separate <link> elements is usually preferred because we can still have the content while waiting for css to load */
+
+@import url("variables.css");
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-stack);
+    line-height: 2;
+    color:var(--color-primary-text);
+    background-color: var(--color-background);
+    margin: var(--spacing);
+}
+
+main {
+    max-width: 65ch;
+    margin-inline: auto;
+}
+
+
+h1, h2{
+    color: var(--color-title);
+    font-size: 2rem;
+    margin-top: 1.5em;
+}
+
+p {
+    color: var(--color-secondary-text);
+    line-height: 1.75;
+}
+
+hgroup {
+    margin: 0.5rem;
+}
+
+blockquote {
+    padding: 1em;
+    border-inline-end: 0.25em solid var(--color-secondary);
+    
+}
+
+button {
+    background-color: var(--color-primary);
+    margin: 1em;
+    padding: 0.5em;
+    color: var(--color-secondary-text);
+    border: 2px outset;
+
+}
+
+article > p {
+    margin-top: 2em;
+    margin-bottom:1em;
+}
+
+header p {
+    color: var(--color-secondary);
+    font-size: 1rem;
+    text-align: right;
+}
+
+dt + dd {
+    color:var(--color-border);
+    border-inline-start: 0.25em solid var(--color-secondary);
+    padding-inline-start: 1em;
+    font-size: 0.9em;
+}
+
+blockquote p {
+    color: var(--color-secondary);
+    text-align: end;
+    
+}
+
+blockquote footer p{
+    color: var(--color-secondary-text);
+    font-size: 0.75em;
+}
+
+a:hover {
+    color: var(--color-title);
+}
+
+input:focus,
+button:focus,
+a:focus {
+    outline: 2px solid var(--color-secondary);
+    outline-offset: 2px;
+}
+
+input[type="checkbox"]:checked + label {
+    color: var(--color-title);
+    font-weight: bold;
+}
+
+[lang] {
+    font-style: italic;
+}
+
+[type="text"] {
+    border: 1px solid var(--color-border);
+    padding: 0.5rem;
+    
+}
+.latin-term{
+    font-weight: bold;
+    color: var(--color-primary-text);
+}
+#processed-cheese-warning{
+    color:var(--color-primary-text);
+    /* font-weight: bold; */
+    font-style: normal;
+    border: 0.1em solid var(--color-border);
+    margin: var(--spacing);
+    padding: var(--spacing);
+}
+
+blockquote::before { color: var(--color-secondary); 
+              content:  "For those who believe that mold is a cheese's reputation: ";}

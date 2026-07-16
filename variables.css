@@ -1,0 +1,12 @@
+:root{
+    --color-title: #b36902;
+    --color-primary: #FCE68E;
+    --color-secondary: #c89820;
+    --color-primary-text:#000000;
+    --color-secondary-text:#6B7280;
+    --color-background: #F9F2CC;
+    --color-border: #7d2222;
+    --spacing: 1rem;
+    --font-stack: Arial, sans-serif;
+
+}

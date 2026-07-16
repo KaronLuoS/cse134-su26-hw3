@@ -4,6 +4,18 @@
         <meta charset="UTF-8">
         <title>A short guide to cheese</title>
         <link rel="stylesheet" href="cheese.css">
+        <style>
+            /* This rule wins because it is loaded later, so it overwrite. I have tried putting it before the <link>, and the stylesheet overwrites.
+            So the rule is:
+                Importance (!important)
+                Browser !important > User !important > Author !important            >author>user>browser????
+                Specificity
+                Order (later rules win if everything else is equal)
+             */
+            h1 {
+                color: darkred;
+            }
+        </style>
     </head>
     <body>
         <main>
@@ -24,7 +36,7 @@
                         Cheese begins when milk separates into curds and whey. The curds are pressed, salted, and aged. Every variable matters: the animal, the season, the cave, the patience of the maker. Change one and you get a different cheese. This is why a single recipe has produced thousands of distinct varieties.
                     </p>
                     <p>
-                        The word <q>cheese</q> comes from the Latin <i class="latin-term">caseus</i>, which also gives us the word <i class="latin-term">casein</i>, the main milk protein.
+                        The word <q>cheese</q> comes from the Latin <i lang="la" class="latin-term">caseus</i>, which also gives us the word <i lang="la" class="latin-term">casein</i>, the main milk protein.
                     </p>
                 </section>
 
@@ -55,12 +67,15 @@
                     <p id="processed-cheese-warning">
                         Warning: The American product known as <q>processed cheese food</q> is, at best, distantly related to cheese. Read the label.
                     </p>
-                    <blockquote></blockquote>
+                    <blockquote>
                         <p>
                             Cheese is milk's leap toward immortality.
                         </p>
                         <footer>
-                            — Clifton Fadiman
+                            <p>
+                                 — Clifton Fadiman
+                            </p>
+                           
                         </footer>
                     </blockquote>
                 </section>
@@ -72,9 +87,19 @@
                             <legend>
                                  Which of these have you tasted?
                             </legend>
-                            <p><label><input type="checkbox" name="cheese" value="brie"> Brie</label></p>
-                            <p><label><input type="checkbox" name="cheese" value="Roquefort">Roquefort</label></p>
-                            <p><label><input type="checkbox" name="cheese" value="Aged Gouda">Aged Gouda</label></p>
+                            <p>
+                                <input id="brie" type="checkbox" name="cheese" value="brie">
+                                <label for="brie">Brie</label>  
+                            </p>
+                            <p>
+                                <input id="roquefort" type="checkbox" name="cheese" value="Roquefort">
+                                <label for="roquefort">Roquefort</label>
+                            </p>
+                            <p>
+                                <input id="aged-gouda" type="checkbox" name="cheese" value="Aged Gouda">
+                                <label for="aged-gouda">Aged Gouda</label>
+                            </p>
+                             
                         </fieldset>
                         <p><label for="favorite-cheese">Tell us your favorite cheese:</label></p>
                         <input id="favorite-cheese" name="favorite-cheese" type="text">
