@@ -1,3 +1,4 @@
+/* https://velvety-panda-5c310d.netlify.app/cheese */
 /* :root{
     --color-title: #b36902;
     --color-primary: #FCE68E;
@@ -28,6 +29,7 @@ body {
 }
 
 main {
+    width: 80%;
     max-width: 65ch;
     margin-inline: auto;
 }
@@ -130,5 +132,7 @@ input[type="checkbox"]:checked + label {
     padding: var(--spacing);
 }
 
-blockquote::before { color: var(--color-secondary); 
-              content:  "For those who believe that mold is a cheese's reputation: ";}
+blockquote::before { 
+    color: var(--color-secondary); 
+    content:  "For those who believe that mold is a cheese's reputation: ";
+}
